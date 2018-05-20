@@ -1,0 +1,1482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ImobGentilModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="interesse">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idimovel" Type="int" />
+          <Property Name="data" Type="datetime" />
+          <Property Name="status" Type="varchar" MaxLength="20" />
+          <Property Name="idcliente" Type="int" />
+        </EntityType>
+        <EntityType Name="locacoes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idvisita" Type="int" Nullable="false" />
+          <Property Name="diapagamento" Type="varchar" MaxLength="2" />
+          <Property Name="status" Type="varchar" MaxLength="15" />
+          <Property Name="datalocacao" Type="date" />
+        </EntityType>
+        <EntityType Name="pagamentos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idlocacoes" Type="int" />
+          <Property Name="datap" Type="date" />
+          <Property Name="valor" Type="decimal" Precision="8" Scale="2" />
+        </EntityType>
+        <EntityType Name="vendas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idvisita" Type="int" />
+          <Property Name="datav" Type="date" />
+          <Property Name="status" Type="varchar" MaxLength="15" />
+          <Property Name="corretorcomissao" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="visita">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idcliente" Type="int" />
+          <Property Name="idcorretor" Type="int" />
+          <Property Name="idimovel" Type="int" />
+          <Property Name="data" Type="date" />
+          <Property Name="resultado" Type="varchar" MaxLength="15" />
+          <Property Name="status" Type="varchar" MaxLength="15" />
+          <Property Name="hora" Type="varchar" MaxLength="10" />
+          <Property Name="corretorcomissao" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdState" Type="int" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCountry" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Acronym" Type="varchar" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="categoria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="endereco">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="logradouro" Type="varchar" MaxLength="300" />
+          <Property Name="numero" Type="int" />
+          <Property Name="cidade" Type="int" Nullable="false" />
+          <Property Name="bairro" Type="varchar" MaxLength="30" />
+          <Property Name="cep" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="imagem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="100" />
+          <Property Name="idimovel" Type="int" />
+        </EntityType>
+        <EntityType Name="imovel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idendereco" Type="int" />
+          <Property Name="idcategoria" Type="int" />
+          <Property Name="finalidade" Type="varchar" MaxLength="100" />
+          <Property Name="areacon" Type="varchar" MaxLength="100" />
+          <Property Name="areater" Type="varchar" MaxLength="100" />
+          <Property Name="qtdquartos" Type="int" />
+          <Property Name="valor" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="valorvendalocacao" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="idcliente" Type="int" />
+          <Property Name="idimagens" Type="int" />
+          <Property Name="publicacaostatus" Type="varchar" MaxLength="20" />
+          <Property Name="idproprietario" Type="int" />
+          <Property Name="imagem" Type="varchar" MaxLength="50" />
+          <Property Name="imagem2" Type="varchar" MaxLength="50" />
+          <Property Name="imagem3" Type="varchar" MaxLength="50" />
+          <Property Name="imagem4" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idpessoa" Type="int" />
+          <Property Name="pendencia" Type="varchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="corretor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idpessoa" Type="int" />
+          <Property Name="vendasrealizadas" Type="int" />
+          <Property Name="vendasvalor" Type="decimal" Precision="8" Scale="2" />
+        </EntityType>
+        <EntityType Name="especializacao">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idcategoria" Type="int" />
+          <Property Name="idcorretor" Type="int" />
+        </EntityType>
+        <EntityType Name="permissoes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idusuario" Type="int" />
+          <Property Name="gerenciarusuario" Type="varchar" MaxLength="1" />
+          <Property Name="publicarimovel" Type="varchar" MaxLength="1" />
+          <Property Name="gerenciarvisita" Type="varchar" MaxLength="1" />
+          <Property Name="gerenciarvendaaluguel" Type="varchar" MaxLength="1" />
+          <Property Name="gerenciarpermissoes" Type="varchar" MaxLength="1" />
+          <Property Name="gerenciarpagamentoaluguel" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="pessoa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nome" Type="varchar" MaxLength="100" />
+          <Property Name="cpf" Type="varchar" MaxLength="20" />
+          <Property Name="idendereco" Type="int" />
+          <Property Name="telefone" Type="varchar" MaxLength="15" />
+          <Property Name="celular" Type="varchar" MaxLength="15" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idpessoa" Type="int" />
+          <Property Name="usuario" Type="varchar" MaxLength="30" />
+          <Property Name="senha" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK__cliente__idpesso__29572725">
+          <End Role="pessoa" Type="Self.pessoa" Multiplicity="0..1" />
+          <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cliente">
+              <PropertyRef Name="idpessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__corretor__idpess__2E1BDC42">
+          <End Role="pessoa" Type="Self.pessoa" Multiplicity="0..1" />
+          <End Role="corretor" Type="Self.corretor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="corretor">
+              <PropertyRef Name="idpessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__especiali__idcat__19DFD96B">
+          <End Role="categoria" Type="Self.categoria" Multiplicity="0..1" />
+          <End Role="especializacao" Type="Self.especializacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoria">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="especializacao">
+              <PropertyRef Name="idcategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__especiali__idcor__1AD3FDA4">
+          <End Role="corretor" Type="Self.corretor" Multiplicity="0..1" />
+          <End Role="especializacao" Type="Self.especializacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="corretor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="especializacao">
+              <PropertyRef Name="idcorretor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__imagem__idimovel__4AB81AF0">
+          <End Role="imovel" Type="Self.imovel" Multiplicity="0..1" />
+          <End Role="imagem" Type="Self.imagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imagem">
+              <PropertyRef Name="idimovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__imovel__idcatego__44FF419A">
+          <End Role="categoria" Type="Self.categoria" Multiplicity="0..1" />
+          <End Role="imovel" Type="Self.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoria">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="idcategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__imovel__idclient__45F365D3">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="imovel" Type="Self.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__imovel__idendere__440B1D61">
+          <End Role="endereco" Type="Self.endereco" Multiplicity="0..1" />
+          <End Role="imovel" Type="Self.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="idendereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__interesse__idimo__1F98B2C1">
+          <End Role="imovel" Type="Self.imovel" Multiplicity="0..1" />
+          <End Role="interesse" Type="Self.interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="interesse">
+              <PropertyRef Name="idimovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__locacoes__idvisi__5AEE82B9">
+          <End Role="visita" Type="Self.visita" Multiplicity="1" />
+          <End Role="locacoes" Type="Self.locacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="visita">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="locacoes">
+              <PropertyRef Name="idvisita" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__pagamento__idloc__5FB337D6">
+          <End Role="locacoes" Type="Self.locacoes" Multiplicity="0..1" />
+          <End Role="pagamentos" Type="Self.pagamentos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="locacoes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="pagamentos">
+              <PropertyRef Name="idlocacoes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usuario__idpesso__33D4B598">
+          <End Role="pessoa" Type="Self.pessoa" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="idpessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__vendas__idvisita__5629CD9C">
+          <End Role="visita" Type="Self.visita" Multiplicity="0..1" />
+          <End Role="vendas" Type="Self.vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="visita">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="vendas">
+              <PropertyRef Name="idvisita" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__visita__idclient__4F7CD00D">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="visita" Type="Self.visita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="visita">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__visita__idcorret__5070F446">
+          <End Role="corretor" Type="Self.corretor" Multiplicity="0..1" />
+          <End Role="visita" Type="Self.visita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="corretor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="visita">
+              <PropertyRef Name="idcorretor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__visita__idimovel__5165187F">
+          <End Role="imovel" Type="Self.imovel" Multiplicity="0..1" />
+          <End Role="visita" Type="Self.visita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="visita">
+              <PropertyRef Name="idimovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_State">
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="City" Type="Self.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="IdState" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_endereco_City1">
+          <End Role="City" Type="Self.City" Multiplicity="1" />
+          <End Role="endereco" Type="Self.endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="endereco">
+              <PropertyRef Name="cidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_imovel_cliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="imovel" Type="Self.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="idproprietario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_interesse_pessoa">
+          <End Role="pessoa" Type="Self.pessoa" Multiplicity="0..1" />
+          <End Role="interesse" Type="Self.interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="interesse">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_permissoes_usuario">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="permissoes" Type="Self.permissoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="permissoes">
+              <PropertyRef Name="idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_pessoa_endereco">
+          <End Role="endereco" Type="Self.endereco" Multiplicity="0..1" />
+          <End Role="pessoa" Type="Self.pessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="pessoa">
+              <PropertyRef Name="idendereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="State" Type="Self.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="IdCountry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_visita_cliente">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="visita" Type="Self.visita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="visita">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ImobGentilModelStoreContainer">
+          <EntitySet Name="interesse" EntityType="Self.interesse" Schema="agenda" store:Type="Tables" />
+          <EntitySet Name="locacoes" EntityType="Self.locacoes" Schema="agenda" store:Type="Tables" />
+          <EntitySet Name="pagamentos" EntityType="Self.pagamentos" Schema="agenda" store:Type="Tables" />
+          <EntitySet Name="vendas" EntityType="Self.vendas" Schema="agenda" store:Type="Tables" />
+          <EntitySet Name="visita" EntityType="Self.visita" Schema="agenda" store:Type="Tables" />
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="categoria" EntityType="Self.categoria" Schema="imoveis" store:Type="Tables" />
+          <EntitySet Name="endereco" EntityType="Self.endereco" Schema="imoveis" store:Type="Tables" />
+          <EntitySet Name="imagem" EntityType="Self.imagem" Schema="imoveis" store:Type="Tables" />
+          <EntitySet Name="imovel" EntityType="Self.imovel" Schema="imoveis" store:Type="Tables" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" Schema="pessoal" store:Type="Tables" />
+          <EntitySet Name="corretor" EntityType="Self.corretor" Schema="pessoal" store:Type="Tables" />
+          <EntitySet Name="especializacao" EntityType="Self.especializacao" Schema="pessoal" store:Type="Tables" />
+          <EntitySet Name="permissoes" EntityType="Self.permissoes" Schema="pessoal" store:Type="Tables" />
+          <EntitySet Name="pessoa" EntityType="Self.pessoa" Schema="pessoal" store:Type="Tables" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" Schema="pessoal" store:Type="Tables" />
+          <AssociationSet Name="FK__cliente__idpesso__29572725" Association="Self.FK__cliente__idpesso__29572725">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="cliente" EntitySet="cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__corretor__idpess__2E1BDC42" Association="Self.FK__corretor__idpess__2E1BDC42">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="corretor" EntitySet="corretor" />
+          </AssociationSet>
+          <AssociationSet Name="FK__especiali__idcat__19DFD96B" Association="Self.FK__especiali__idcat__19DFD96B">
+            <End Role="categoria" EntitySet="categoria" />
+            <End Role="especializacao" EntitySet="especializacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__especiali__idcor__1AD3FDA4" Association="Self.FK__especiali__idcor__1AD3FDA4">
+            <End Role="corretor" EntitySet="corretor" />
+            <End Role="especializacao" EntitySet="especializacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__imagem__idimovel__4AB81AF0" Association="Self.FK__imagem__idimovel__4AB81AF0">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imagem" EntitySet="imagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__imovel__idcatego__44FF419A" Association="Self.FK__imovel__idcatego__44FF419A">
+            <End Role="categoria" EntitySet="categoria" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__imovel__idclient__45F365D3" Association="Self.FK__imovel__idclient__45F365D3">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__imovel__idendere__440B1D61" Association="Self.FK__imovel__idendere__440B1D61">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__interesse__idimo__1F98B2C1" Association="Self.FK__interesse__idimo__1F98B2C1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="interesse" EntitySet="interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__locacoes__idvisi__5AEE82B9" Association="Self.FK__locacoes__idvisi__5AEE82B9">
+            <End Role="visita" EntitySet="visita" />
+            <End Role="locacoes" EntitySet="locacoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__pagamento__idloc__5FB337D6" Association="Self.FK__pagamento__idloc__5FB337D6">
+            <End Role="locacoes" EntitySet="locacoes" />
+            <End Role="pagamentos" EntitySet="pagamentos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usuario__idpesso__33D4B598" Association="Self.FK__usuario__idpesso__33D4B598">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK__vendas__idvisita__5629CD9C" Association="Self.FK__vendas__idvisita__5629CD9C">
+            <End Role="visita" EntitySet="visita" />
+            <End Role="vendas" EntitySet="vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__visita__idclient__4F7CD00D" Association="Self.FK__visita__idclient__4F7CD00D">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="visita" EntitySet="visita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__visita__idcorret__5070F446" Association="Self.FK__visita__idcorret__5070F446">
+            <End Role="corretor" EntitySet="corretor" />
+            <End Role="visita" EntitySet="visita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__visita__idimovel__5165187F" Association="Self.FK__visita__idimovel__5165187F">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="visita" EntitySet="visita" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_State" Association="Self.FK_City_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_endereco_City1" Association="Self.FK_endereco_City1">
+            <End Role="City" EntitySet="City" />
+            <End Role="endereco" EntitySet="endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_imovel_cliente" Association="Self.FK_imovel_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_interesse_pessoa" Association="Self.FK_interesse_pessoa">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="interesse" EntitySet="interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_permissoes_usuario" Association="Self.FK_permissoes_usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="permissoes" EntitySet="permissoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pessoa_endereco" Association="Self.FK_pessoa_endereco">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="pessoa" EntitySet="pessoa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country" Association="Self.FK_State_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_visita_cliente" Association="Self.FK_visita_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="visita" EntitySet="visita" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ImobGentilModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="locacoes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idvisita" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="visita" Relationship="Self.FK__locacoes__idvisi__5AEE82B9" FromRole="locacoes" ToRole="visita" />
+          <NavigationProperty Name="pagamentos" Relationship="Self.FK__pagamento__idloc__5FB337D6" FromRole="locacoes" ToRole="pagamentos" />
+          <Property Name="diapagamento" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="datalocacao" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="pagamentos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idlocacoes" Type="Int32" />
+          <Property Name="datap" Type="DateTime" Precision="0" />
+          <Property Name="valor" Type="Decimal" Precision="8" Scale="2" />
+          <NavigationProperty Name="locacoes" Relationship="Self.FK__pagamento__idloc__5FB337D6" FromRole="pagamentos" ToRole="locacoes" />
+        </EntityType>
+        <EntityType Name="vendas">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idvisita" Type="Int32" />
+          <Property Name="datav" Type="DateTime" Precision="0" />
+          <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="visita" Relationship="Self.FK__vendas__idvisita__5629CD9C" FromRole="vendas" ToRole="visita" />
+          <Property Name="corretorcomissao" Type="Decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="visita">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idcliente" Type="Int32" />
+          <Property Name="idcorretor" Type="Int32" />
+          <Property Name="idimovel" Type="Int32" />
+          <Property Name="data" Type="DateTime" Precision="0" />
+          <Property Name="resultado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="locacoes" Relationship="Self.FK__locacoes__idvisi__5AEE82B9" FromRole="visita" ToRole="locacoes" />
+          <NavigationProperty Name="vendas" Relationship="Self.FK__vendas__idvisita__5629CD9C" FromRole="visita" ToRole="vendas" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK__visita__idclient__4F7CD00D" FromRole="visita" ToRole="cliente" />
+          <NavigationProperty Name="corretor" Relationship="Self.FK__visita__idcorret__5070F446" FromRole="visita" ToRole="corretor" />
+          <NavigationProperty Name="imovel" Relationship="Self.FK__visita__idimovel__5165187F" FromRole="visita" ToRole="imovel" />
+          <Property Name="hora" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="corretorcomissao" Type="Decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IdState" Type="Int32" />
+          <NavigationProperty Name="State" Relationship="Self.FK_City_State" FromRole="City" ToRole="State" />
+          <NavigationProperty Name="endereco" Relationship="Self.FK_endereco_City1" FromRole="City" ToRole="endereco" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="State" Relationship="Self.FK_State_Country" FromRole="Country" ToRole="State" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCountry" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Acronym" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="City" Relationship="Self.FK_City_State" FromRole="State" ToRole="City" />
+          <NavigationProperty Name="Country" Relationship="Self.FK_State_Country" FromRole="State" ToRole="Country" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="categoria">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="imovel" Relationship="Self.FK__imovel__idcatego__44FF419A" FromRole="categoria" ToRole="imovel" />
+          <NavigationProperty Name="especializacao" Relationship="ImobGentilModel.FK__especiali__idcat__19DFD96B" FromRole="categoria" ToRole="especializacao" />
+        </EntityType>
+        <EntityType Name="endereco">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="logradouro" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="numero" Type="Int32" />
+          <Property Name="cidade" Type="Int32" Nullable="false" />
+          <Property Name="bairro" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="cep" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="City" Relationship="Self.FK_endereco_City1" FromRole="endereco" ToRole="City" />
+          <NavigationProperty Name="imovel" Relationship="Self.FK__imovel__idendere__440B1D61" FromRole="endereco" ToRole="imovel" />
+          <NavigationProperty Name="pessoa" Relationship="ImobGentilModel.FK_pessoa_endereco" FromRole="endereco" ToRole="pessoa" />
+        </EntityType>
+        <EntityType Name="imagem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="idimovel" Type="Int32" />
+          <NavigationProperty Name="imovel" Relationship="Self.FK__imagem__idimovel__4AB81AF0" FromRole="imagem" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="imovel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idendereco" Type="Int32" />
+          <Property Name="idcategoria" Type="Int32" />
+          <Property Name="finalidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="areacon" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="areater" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="qtdquartos" Type="Int32" />
+          <Property Name="valor" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="valorvendalocacao" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="idcliente" Type="Int32" />
+          <Property Name="idimagens" Type="Int32" />
+          <Property Name="publicacaostatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="visita" Relationship="Self.FK__visita__idimovel__5165187F" FromRole="imovel" ToRole="visita" />
+          <NavigationProperty Name="categoria" Relationship="Self.FK__imovel__idcatego__44FF419A" FromRole="imovel" ToRole="categoria" />
+          <NavigationProperty Name="endereco" Relationship="Self.FK__imovel__idendere__440B1D61" FromRole="imovel" ToRole="endereco" />
+          <NavigationProperty Name="imagem" Relationship="Self.FK__imagem__idimovel__4AB81AF0" FromRole="imovel" ToRole="imagem" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK__imovel__idclient__45F365D3" FromRole="imovel" ToRole="cliente" />
+          <Property Name="idproprietario" Type="Int32" />
+          <NavigationProperty Name="cliente1" Relationship="ImobGentilModel.FK_imovel_cliente" FromRole="imovel" ToRole="cliente" />
+          <NavigationProperty Name="interesse" Relationship="ImobGentilModel.FK__interesse__idimo__1F98B2C1" FromRole="imovel" ToRole="interesse" />
+          <Property Name="imagem1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="imagem2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="imagem3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="imagem4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="cliente">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idpessoa" Type="Int32" />
+          <Property Name="pendencia" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="visita" Relationship="Self.FK__visita__idclient__4F7CD00D" FromRole="cliente" ToRole="visita" />
+          <NavigationProperty Name="imovel" Relationship="Self.FK__imovel__idclient__45F365D3" FromRole="cliente" ToRole="imovel" />
+          <NavigationProperty Name="pessoa" Relationship="Self.FK__cliente__idpesso__29572725" FromRole="cliente" ToRole="pessoa" />
+          <NavigationProperty Name="imovel1" Relationship="ImobGentilModel.FK_imovel_cliente" FromRole="cliente" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="corretor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idpessoa" Type="Int32" />
+          <Property Name="vendasrealizadas" Type="Int32" />
+          <Property Name="vendasvalor" Type="Decimal" Precision="8" Scale="2" />
+          <NavigationProperty Name="visita" Relationship="Self.FK__visita__idcorret__5070F446" FromRole="corretor" ToRole="visita" />
+          <NavigationProperty Name="pessoa" Relationship="Self.FK__corretor__idpess__2E1BDC42" FromRole="corretor" ToRole="pessoa" />
+          <NavigationProperty Name="especializacao" Relationship="ImobGentilModel.FK__especiali__idcor__1AD3FDA4" FromRole="corretor" ToRole="especializacao" />
+        </EntityType>
+        <EntityType Name="permissoes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idusuario" Type="Int32" />
+          <Property Name="gerenciarusuario" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="publicarimovel" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="gerenciarvisita" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK_permissoes_usuario" FromRole="permissoes" ToRole="usuario" />
+          <Property Name="gerenciarvendaaluguel" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="gerenciarpermissoes" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="gerenciarpagamentoaluguel" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pessoa">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cpf" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK__cliente__idpesso__29572725" FromRole="pessoa" ToRole="cliente" />
+          <NavigationProperty Name="corretor" Relationship="Self.FK__corretor__idpess__2E1BDC42" FromRole="pessoa" ToRole="corretor" />
+          <NavigationProperty Name="usuario" Relationship="Self.FK__usuario__idpesso__33D4B598" FromRole="pessoa" ToRole="usuario" />
+          <Property Name="idendereco" Type="Int32" />
+          <NavigationProperty Name="endereco" Relationship="ImobGentilModel.FK_pessoa_endereco" FromRole="pessoa" ToRole="endereco" />
+          <Property Name="celular" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="interesse" Relationship="ImobGentilModel.FK_interesse_pessoa" FromRole="pessoa" ToRole="interesse" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idpessoa" Type="Int32" />
+          <Property Name="usuario1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="senha" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="permissoes" Relationship="Self.FK_permissoes_usuario" FromRole="usuario" ToRole="permissoes" />
+          <NavigationProperty Name="pessoa" Relationship="Self.FK__usuario__idpesso__33D4B598" FromRole="usuario" ToRole="pessoa" />
+        </EntityType>
+        <Association Name="FK__locacoes__idvisi__5AEE82B9">
+          <End Role="visita" Type="Self.visita" Multiplicity="1" />
+          <End Role="locacoes" Type="Self.locacoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="visita">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="locacoes">
+              <PropertyRef Name="idvisita" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__pagamento__idloc__5FB337D6">
+          <End Role="locacoes" Type="Self.locacoes" Multiplicity="0..1" />
+          <End Role="pagamentos" Type="Self.pagamentos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="locacoes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="pagamentos">
+              <PropertyRef Name="idlocacoes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__vendas__idvisita__5629CD9C">
+          <End Role="visita" Type="Self.visita" Multiplicity="0..1" />
+          <End Role="vendas" Type="Self.vendas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="visita">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="vendas">
+              <PropertyRef Name="idvisita" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__visita__idclient__4F7CD00D">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="visita" Type="Self.visita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="visita">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__visita__idcorret__5070F446">
+          <End Role="corretor" Type="Self.corretor" Multiplicity="0..1" />
+          <End Role="visita" Type="Self.visita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="corretor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="visita">
+              <PropertyRef Name="idcorretor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__visita__idimovel__5165187F">
+          <End Role="imovel" Type="Self.imovel" Multiplicity="0..1" />
+          <End Role="visita" Type="Self.visita" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="visita">
+              <PropertyRef Name="idimovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_City_State">
+          <End Role="State" Type="Self.State" Multiplicity="0..1" />
+          <End Role="City" Type="Self.City" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="City">
+              <PropertyRef Name="IdState" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_endereco_City1">
+          <End Role="City" Type="Self.City" Multiplicity="1" />
+          <End Role="endereco" Type="Self.endereco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="endereco">
+              <PropertyRef Name="cidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="State" Type="Self.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="IdCountry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__imovel__idcatego__44FF419A">
+          <End Role="categoria" Type="Self.categoria" Multiplicity="0..1" />
+          <End Role="imovel" Type="Self.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoria">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="idcategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__imovel__idendere__440B1D61">
+          <End Role="endereco" Type="Self.endereco" Multiplicity="0..1" />
+          <End Role="imovel" Type="Self.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="idendereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__imagem__idimovel__4AB81AF0">
+          <End Role="imovel" Type="Self.imovel" Multiplicity="0..1" />
+          <End Role="imagem" Type="Self.imagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imagem">
+              <PropertyRef Name="idimovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__imovel__idclient__45F365D3">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="imovel" Type="Self.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__cliente__idpesso__29572725">
+          <End Role="pessoa" Type="Self.pessoa" Multiplicity="0..1" />
+          <End Role="cliente" Type="Self.cliente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="cliente">
+              <PropertyRef Name="idpessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__corretor__idpess__2E1BDC42">
+          <End Role="pessoa" Type="Self.pessoa" Multiplicity="0..1" />
+          <End Role="corretor" Type="Self.corretor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="corretor">
+              <PropertyRef Name="idpessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_permissoes_usuario">
+          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="permissoes" Type="Self.permissoes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="permissoes">
+              <PropertyRef Name="idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usuario__idpesso__33D4B598">
+          <End Role="pessoa" Type="Self.pessoa" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="idpessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ImobGentilEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="locacoes" EntityType="Self.locacoes" />
+          <EntitySet Name="pagamentos" EntityType="Self.pagamentos" />
+          <EntitySet Name="vendas" EntityType="Self.vendas" />
+          <EntitySet Name="visita" EntityType="Self.visita" />
+          <EntitySet Name="City" EntityType="Self.City" />
+          <EntitySet Name="Country" EntityType="Self.Country" />
+          <EntitySet Name="State" EntityType="Self.State" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="categoria" EntityType="Self.categoria" />
+          <EntitySet Name="endereco" EntityType="Self.endereco" />
+          <EntitySet Name="imagem" EntityType="Self.imagem" />
+          <EntitySet Name="imovel" EntityType="Self.imovel" />
+          <EntitySet Name="cliente" EntityType="Self.cliente" />
+          <EntitySet Name="corretor" EntityType="Self.corretor" />
+          <EntitySet Name="permissoes" EntityType="Self.permissoes" />
+          <EntitySet Name="pessoa" EntityType="Self.pessoa" />
+          <EntitySet Name="usuario" EntityType="Self.usuario" />
+          <AssociationSet Name="FK__locacoes__idvisi__5AEE82B9" Association="Self.FK__locacoes__idvisi__5AEE82B9">
+            <End Role="visita" EntitySet="visita" />
+            <End Role="locacoes" EntitySet="locacoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__pagamento__idloc__5FB337D6" Association="Self.FK__pagamento__idloc__5FB337D6">
+            <End Role="locacoes" EntitySet="locacoes" />
+            <End Role="pagamentos" EntitySet="pagamentos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__vendas__idvisita__5629CD9C" Association="Self.FK__vendas__idvisita__5629CD9C">
+            <End Role="visita" EntitySet="visita" />
+            <End Role="vendas" EntitySet="vendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__visita__idclient__4F7CD00D" Association="Self.FK__visita__idclient__4F7CD00D">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="visita" EntitySet="visita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__visita__idcorret__5070F446" Association="Self.FK__visita__idcorret__5070F446">
+            <End Role="corretor" EntitySet="corretor" />
+            <End Role="visita" EntitySet="visita" />
+          </AssociationSet>
+          <AssociationSet Name="FK__visita__idimovel__5165187F" Association="Self.FK__visita__idimovel__5165187F">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="visita" EntitySet="visita" />
+          </AssociationSet>
+          <AssociationSet Name="FK_City_State" Association="Self.FK_City_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="City" EntitySet="City" />
+          </AssociationSet>
+          <AssociationSet Name="FK_endereco_City1" Association="Self.FK_endereco_City1">
+            <End Role="City" EntitySet="City" />
+            <End Role="endereco" EntitySet="endereco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country" Association="Self.FK_State_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK__imovel__idcatego__44FF419A" Association="Self.FK__imovel__idcatego__44FF419A">
+            <End Role="categoria" EntitySet="categoria" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__imovel__idendere__440B1D61" Association="Self.FK__imovel__idendere__440B1D61">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__imagem__idimovel__4AB81AF0" Association="Self.FK__imagem__idimovel__4AB81AF0">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imagem" EntitySet="imagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__imovel__idclient__45F365D3" Association="Self.FK__imovel__idclient__45F365D3">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="FK__cliente__idpesso__29572725" Association="Self.FK__cliente__idpesso__29572725">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="cliente" EntitySet="cliente" />
+          </AssociationSet>
+          <AssociationSet Name="FK__corretor__idpess__2E1BDC42" Association="Self.FK__corretor__idpess__2E1BDC42">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="corretor" EntitySet="corretor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_permissoes_usuario" Association="Self.FK_permissoes_usuario">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="permissoes" EntitySet="permissoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usuario__idpesso__33D4B598" Association="Self.FK__usuario__idpesso__33D4B598">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pessoa_endereco" Association="ImobGentilModel.FK_pessoa_endereco">
+            <End Role="endereco" EntitySet="endereco" />
+            <End Role="pessoa" EntitySet="pessoa" />
+          </AssociationSet>
+          <AssociationSet Name="FK_imovel_cliente" Association="ImobGentilModel.FK_imovel_cliente">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <EntitySet Name="especializacao" EntityType="ImobGentilModel.especializacao" />
+          <AssociationSet Name="FK__especiali__idcat__19DFD96B" Association="ImobGentilModel.FK__especiali__idcat__19DFD96B">
+            <End Role="categoria" EntitySet="categoria" />
+            <End Role="especializacao" EntitySet="especializacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK__especiali__idcor__1AD3FDA4" Association="ImobGentilModel.FK__especiali__idcor__1AD3FDA4">
+            <End Role="corretor" EntitySet="corretor" />
+            <End Role="especializacao" EntitySet="especializacao" />
+          </AssociationSet>
+          <EntitySet Name="interesse" EntityType="ImobGentilModel.interesse" />
+          <AssociationSet Name="FK__interesse__idimo__1F98B2C1" Association="ImobGentilModel.FK__interesse__idimo__1F98B2C1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="interesse" EntitySet="interesse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_interesse_pessoa" Association="ImobGentilModel.FK_interesse_pessoa">
+            <End Role="pessoa" EntitySet="pessoa" />
+            <End Role="interesse" EntitySet="interesse" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="FK_pessoa_endereco">
+          <End Type="ImobGentilModel.endereco" Role="endereco" Multiplicity="0..1" />
+          <End Type="ImobGentilModel.pessoa" Role="pessoa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="endereco">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="pessoa">
+              <PropertyRef Name="idendereco" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_imovel_cliente">
+          <End Type="ImobGentilModel.cliente" Role="cliente" Multiplicity="0..1" />
+          <End Type="ImobGentilModel.imovel" Role="imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="idproprietario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="especializacao">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idcategoria" Type="Int32" />
+          <Property Name="idcorretor" Type="Int32" />
+          <NavigationProperty Name="categoria" Relationship="ImobGentilModel.FK__especiali__idcat__19DFD96B" FromRole="especializacao" ToRole="categoria" />
+          <NavigationProperty Name="corretor" Relationship="ImobGentilModel.FK__especiali__idcor__1AD3FDA4" FromRole="especializacao" ToRole="corretor" />
+        </EntityType>
+        <Association Name="FK__especiali__idcat__19DFD96B">
+          <End Type="ImobGentilModel.categoria" Role="categoria" Multiplicity="0..1" />
+          <End Type="ImobGentilModel.especializacao" Role="especializacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoria">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="especializacao">
+              <PropertyRef Name="idcategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__especiali__idcor__1AD3FDA4">
+          <End Type="ImobGentilModel.corretor" Role="corretor" Multiplicity="0..1" />
+          <End Type="ImobGentilModel.especializacao" Role="especializacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="corretor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="especializacao">
+              <PropertyRef Name="idcorretor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="interesse">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idimovel" Type="Int32" />
+          <Property Name="data" Type="DateTime" Precision="3" />
+          <Property Name="status" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="imovel" Relationship="ImobGentilModel.FK__interesse__idimo__1F98B2C1" FromRole="interesse" ToRole="imovel" />
+          <Property Name="idcliente" Type="Int32" />
+          <NavigationProperty Name="pessoa" Relationship="ImobGentilModel.FK_interesse_pessoa" FromRole="interesse" ToRole="pessoa" />
+        </EntityType>
+        <Association Name="FK__interesse__idimo__1F98B2C1">
+          <End Type="ImobGentilModel.imovel" Role="imovel" Multiplicity="0..1" />
+          <End Type="ImobGentilModel.interesse" Role="interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="interesse">
+              <PropertyRef Name="idimovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_interesse_pessoa">
+          <End Type="ImobGentilModel.pessoa" Role="pessoa" Multiplicity="0..1" />
+          <End Type="ImobGentilModel.interesse" Role="interesse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pessoa">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="interesse">
+              <PropertyRef Name="idcliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ImobGentilModelStoreContainer" CdmEntityContainer="ImobGentilEntities">
+          <EntitySetMapping Name="locacoes">
+            <EntityTypeMapping TypeName="ImobGentilModel.locacoes">
+              <MappingFragment StoreEntitySet="locacoes">
+                <ScalarProperty Name="datalocacao" ColumnName="datalocacao" />
+                <ScalarProperty Name="diapagamento" ColumnName="diapagamento" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idvisita" ColumnName="idvisita" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pagamentos">
+            <EntityTypeMapping TypeName="ImobGentilModel.pagamentos">
+              <MappingFragment StoreEntitySet="pagamentos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idlocacoes" ColumnName="idlocacoes" />
+                <ScalarProperty Name="datap" ColumnName="datap" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vendas">
+            <EntityTypeMapping TypeName="ImobGentilModel.vendas">
+              <MappingFragment StoreEntitySet="vendas">
+                <ScalarProperty Name="corretorcomissao" ColumnName="corretorcomissao" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idvisita" ColumnName="idvisita" />
+                <ScalarProperty Name="datav" ColumnName="datav" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="visita">
+            <EntityTypeMapping TypeName="ImobGentilModel.visita">
+              <MappingFragment StoreEntitySet="visita">
+                <ScalarProperty Name="corretorcomissao" ColumnName="corretorcomissao" />
+                <ScalarProperty Name="hora" ColumnName="hora" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="idcorretor" ColumnName="idcorretor" />
+                <ScalarProperty Name="idimovel" ColumnName="idimovel" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="resultado" ColumnName="resultado" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="City">
+            <EntityTypeMapping TypeName="ImobGentilModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdState" ColumnName="IdState" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Country">
+            <EntityTypeMapping TypeName="ImobGentilModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="State">
+            <EntityTypeMapping TypeName="ImobGentilModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdCountry" ColumnName="IdCountry" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ImobGentilModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categoria">
+            <EntityTypeMapping TypeName="ImobGentilModel.categoria">
+              <MappingFragment StoreEntitySet="categoria">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="endereco">
+            <EntityTypeMapping TypeName="ImobGentilModel.endereco">
+              <MappingFragment StoreEntitySet="endereco">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="logradouro" ColumnName="logradouro" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="cidade" ColumnName="cidade" />
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="cep" ColumnName="cep" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="imagem">
+            <EntityTypeMapping TypeName="ImobGentilModel.imagem">
+              <MappingFragment StoreEntitySet="imagem">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="idimovel" ColumnName="idimovel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="imovel">
+            <EntityTypeMapping TypeName="ImobGentilModel.imovel">
+              <MappingFragment StoreEntitySet="imovel">
+                <ScalarProperty Name="imagem4" ColumnName="imagem4" />
+                <ScalarProperty Name="imagem3" ColumnName="imagem3" />
+                <ScalarProperty Name="imagem2" ColumnName="imagem2" />
+                <ScalarProperty Name="imagem1" ColumnName="imagem" />
+                <ScalarProperty Name="idproprietario" ColumnName="idproprietario" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idendereco" ColumnName="idendereco" />
+                <ScalarProperty Name="idcategoria" ColumnName="idcategoria" />
+                <ScalarProperty Name="finalidade" ColumnName="finalidade" />
+                <ScalarProperty Name="areacon" ColumnName="areacon" />
+                <ScalarProperty Name="areater" ColumnName="areater" />
+                <ScalarProperty Name="qtdquartos" ColumnName="qtdquartos" />
+                <ScalarProperty Name="valor" ColumnName="valor" />
+                <ScalarProperty Name="valorvendalocacao" ColumnName="valorvendalocacao" />
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="idimagens" ColumnName="idimagens" />
+                <ScalarProperty Name="publicacaostatus" ColumnName="publicacaostatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cliente">
+            <EntityTypeMapping TypeName="ImobGentilModel.cliente">
+              <MappingFragment StoreEntitySet="cliente">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idpessoa" ColumnName="idpessoa" />
+                <ScalarProperty Name="pendencia" ColumnName="pendencia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="corretor">
+            <EntityTypeMapping TypeName="ImobGentilModel.corretor">
+              <MappingFragment StoreEntitySet="corretor">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idpessoa" ColumnName="idpessoa" />
+                <ScalarProperty Name="vendasrealizadas" ColumnName="vendasrealizadas" />
+                <ScalarProperty Name="vendasvalor" ColumnName="vendasvalor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="permissoes">
+            <EntityTypeMapping TypeName="ImobGentilModel.permissoes">
+              <MappingFragment StoreEntitySet="permissoes">
+                <ScalarProperty Name="gerenciarpagamentoaluguel" ColumnName="gerenciarpagamentoaluguel" />
+                <ScalarProperty Name="gerenciarpermissoes" ColumnName="gerenciarpermissoes" />
+                <ScalarProperty Name="gerenciarvendaaluguel" ColumnName="gerenciarvendaaluguel" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+                <ScalarProperty Name="gerenciarusuario" ColumnName="gerenciarusuario" />
+                <ScalarProperty Name="publicarimovel" ColumnName="publicarimovel" />
+                <ScalarProperty Name="gerenciarvisita" ColumnName="gerenciarvisita" />
+                </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pessoa">
+            <EntityTypeMapping TypeName="ImobGentilModel.pessoa">
+              <MappingFragment StoreEntitySet="pessoa">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="idendereco" ColumnName="idendereco" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="ImobGentilModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idpessoa" ColumnName="idpessoa" />
+                <ScalarProperty Name="usuario1" ColumnName="usuario" />
+                <ScalarProperty Name="senha" ColumnName="senha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="especializacao">
+            <EntityTypeMapping TypeName="ImobGentilModel.especializacao">
+              <MappingFragment StoreEntitySet="especializacao">
+                <ScalarProperty Name="idcorretor" ColumnName="idcorretor" />
+                <ScalarProperty Name="idcategoria" ColumnName="idcategoria" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="interesse">
+            <EntityTypeMapping TypeName="ImobGentilModel.interesse">
+              <MappingFragment StoreEntitySet="interesse">
+                <ScalarProperty Name="idcliente" ColumnName="idcliente" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="idimovel" ColumnName="idimovel" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

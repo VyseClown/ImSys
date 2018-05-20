@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFFD6367-00DE-4F36-9975-09F52624C7AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dominio</RootNamespace>
+    <AssemblyName>Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgendaDominio.cs" />
+    <Compile Include="AgendaModel.cs" />
+    <Compile Include="categoria.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cliente.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="corretor.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CorretorModel.cs" />
+    <Compile Include="Country.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="endereco.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="especializacao.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="imagem.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="imovel.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImovelDominio.cs" />
+    <Compile Include="EnderecoDominio.cs" />
+    <Compile Include="ImobiliariaToledo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImobiliariaToledo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImobiliariaToledo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ImobiliariaToledo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImobiliariaToledo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ImovelEnderecoModel.cs" />
+    <Compile Include="ImovelModel.cs" />
+    <Compile Include="ImovelProprietarioModel.cs" />
+    <Compile Include="interesse.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InteresseModel.cs" />
+    <Compile Include="ListarCorretoresEVendas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListarCorretoresEVendas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="locacoes.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pagamentos.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="permissoes.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="pessoa.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PessoaCorretorModel.cs" />
+    <Compile Include="PessoaDominio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatorioClienteAluguelAtrasado.cs">
+      <DependentUpon>RelatorioClienteAluguelAtrasado.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelatorioLucroVendasLocacao.cs">
+      <DependentUpon>RelatorioLucroVendasLocacao.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelatorioRelacaoImoveis.cs">
+      <DependentUpon>RelatorioRelacaoImoveis.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioDominio.cs" />
+    <Compile Include="UsuarioModel.cs" />
+    <Compile Include="vendas.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="visita.cs">
+      <DependentUpon>ImobiliariaToledo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisitaModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ImobiliariaToledo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ImobiliariaToledo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ImobiliariaToledo.edmx.diagram">
+      <DependentUpon>ImobiliariaToledo.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ImobiliariaToledo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ImobiliariaToledo.edmx</DependentUpon>
+      <LastGenOutput>ImobiliariaToledo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ImobiliariaToledo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ImobiliariaToledo.edmx</DependentUpon>
+      <LastGenOutput>ImobiliariaToledo.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListarCorretoresEVendas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListarCorretoresEVendas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioClienteAluguelAtrasado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioClienteAluguelAtrasado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioLucroVendasLocacao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioLucroVendasLocacao.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioRelacaoImoveis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioRelacaoImoveis.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

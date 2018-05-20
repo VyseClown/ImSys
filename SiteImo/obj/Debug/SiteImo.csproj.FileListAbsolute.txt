@@ -1,0 +1,242 @@
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\csc.exe
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\vbc.exe
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\SiteImo.dll.config
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\SiteImo.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\SiteImo.pdb
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Microsoft.ApplicationInsights.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\obj\Debug\SiteImo.csprojResolveAssemblyReference.cache
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\obj\Debug\SiteImo.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\obj\Debug\SiteImo.pdb
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Business.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Dominio.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\EntityFramework.dll
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Business.pdb
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Dominio.pdb
+C:\Users\VyseClown\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\EntityFramework.xml
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\csc.exe
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\System.Collections.Immutable.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\System.Reflection.Metadata.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\vbc.exe
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe.config
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\SiteImo.dll.config
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\SiteImo.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\SiteImo.pdb
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Business.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Dominio.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\EntityFramework.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Microsoft.ApplicationInsights.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Business.pdb
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Dominio.pdb
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Dominio.dll.config
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\bin\EntityFramework.xml
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\obj\Debug\SiteImo.csprojResolveAssemblyReference.cache
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\obj\Debug\SiteImo.dll
+E:\Dropbox\Faculdade 6º Termo\Projeto\ImSys\SiteImo\obj\Debug\SiteImo.pdb
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\csc.exe
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\vbc.exe
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\SiteImo.dll.config
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\SiteImo.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\SiteImo.pdb
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\Business.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\Dominio.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\EntityFramework.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\Business.pdb
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\Dominio.pdb
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\Dominio.dll.config
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\EntityFramework.xml
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\obj\Debug\SiteImo.csprojResolveAssemblyReference.cache
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\obj\Debug\SiteImo.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\obj\Debug\SiteImo.pdb
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.Shared.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportSource.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\alessandrogentil\Desktop\ImSys\SiteImo\bin\stdole.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\csc.exe
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\vbc.exe
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.dll.config
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.pdb
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Business.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Dominio.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\EntityFramework.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.Shared.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportSource.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\stdole.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Business.pdb
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Dominio.pdb
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\EntityFramework.xml
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.csprojResolveAssemblyReference.cache
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.dll
+C:\Users\VyseClown\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.pdb
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\csc.exe
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\vbc.exe
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.dll.config
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.pdb
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Business.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Dominio.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\EntityFramework.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.Shared.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportSource.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Business.pdb
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Dominio.pdb
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Dominio.dll.config
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\bin\EntityFramework.xml
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.csprojResolveAssemblyReference.cache
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.dll
+C:\Users\alessandrogentil\Desktop\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.pdb
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\csc.exe
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\vbc.exe
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.dll.config
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\SiteImo.pdb
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\Business.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\Dominio.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\EntityFramework.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.Shared.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportSource.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\stdole.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\Business.pdb
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\Dominio.pdb
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\bin\EntityFramework.xml
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.csprojResolveAssemblyReference.cache
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.dll
+C:\Users\VyseClown\Desktop\Nova pasta (2)\Seja o que Deus Quiser\Seja o que Deus Quiser\ImSys\SiteImo\obj\Debug\SiteImo.pdb
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\csc.exe
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\vbc.exe
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\SiteImo.dll.config
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\SiteImo.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\SiteImo.pdb
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\Business.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\Dominio.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\EntityFramework.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\CrystalDecisions.Shared.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\CrystalDecisions.ReportSource.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\Business.pdb
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\Dominio.pdb
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\Dominio.dll.config
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\bin\EntityFramework.xml
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\obj\Debug\SiteImo.csprojResolveAssemblyReference.cache
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\obj\Debug\SiteImo.dll
+C:\Users\alessandrogentil\Desktop\Nova pasta (2)\ImSys\ImSys\SiteImo\obj\Debug\SiteImo.pdb

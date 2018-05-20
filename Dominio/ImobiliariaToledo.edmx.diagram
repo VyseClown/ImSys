@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="03f6685be11a450faf3f65026bb20fec" Name="Diagram1">
+        <EntityTypeShape EntityType="ImobGentilModel.locacoes" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.pagamentos" Width="1.5" PointX="9.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.vendas" Width="1.5" PointX="7.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.visita" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.City" Width="1.5" PointX="3.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.Country" Width="1.5" PointX="1.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.State" Width="1.5" PointX="1.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.categoria" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.endereco" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.imagem" Width="1.5" PointX="10.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.imovel" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.cliente" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.corretor" Width="1.5" PointX="3.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.permissoes" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.pessoa" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ImobGentilModel.usuario" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
+        <AssociationConnector Association="ImobGentilModel.FK__locacoes__idvisi__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__pagamento__idloc__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__vendas__idvisita__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__visita__idclient__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__visita__idcorret__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__visita__idimovel__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK_City_State" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK_endereco_City1" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK_State_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__imovel__idcatego__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__imovel__idendere__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__imagem__idimovel__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__imovel__idclient__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__cliente__idpesso__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__corretor__idpess__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK_permissoes_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK__usuario__idpesso__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="ImobGentilModel.FK_pessoa_endereco" />
+        <AssociationConnector Association="ImobGentilModel.FK_imovel_cliente" />
+        <EntityTypeShape EntityType="ImobGentilModel.especializacao" Width="1.5" PointX="9" PointY="1" />
+        <AssociationConnector Association="ImobGentilModel.FK__especiali__idcat__19DFD96B" />
+        <AssociationConnector Association="ImobGentilModel.FK__especiali__idcor__1AD3FDA4" />
+        <EntityTypeShape EntityType="ImobGentilModel.interesse" Width="1.5" PointX="10.5" PointY="16.125" />
+        <AssociationConnector Association="ImobGentilModel.FK__interesse__idimo__1F98B2C1" />
+        <AssociationConnector Association="ImobGentilModel.FK_interesse_pessoa" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
